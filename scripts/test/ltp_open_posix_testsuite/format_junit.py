@@ -5,6 +5,7 @@ Basic script for converting json output to JUnit format
 '''
 
 # requires pip install junit-xml
+# or, pkg inst py32-junit-xml
 import junit_xml
 import json
 import argparse
