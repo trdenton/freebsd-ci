@@ -218,6 +218,7 @@
     builders:
       - add-svn-revision-description
       - checkout-scripts
+      - checkout-ltp
       - execute-job-build-script
     publishers:
       - make-symlink

@@ -10,8 +10,16 @@
     builders:
       - shell: |
           rm -fr freebsd-ci
-          git clone --depth=1 --single-branch -b master https://github.com/freebsd/freebsd-ci.git
+          git clone --depth=1 --single-branch -b master https://github.com/trdenton/freebsd-ci.git
           cd freebsd-ci; git rev-parse HEAD; cd ..
+
+- builder:
+    name: checkout-ltp
+    builders:
+      - shell: |
+          rm -fr ltp-full-20230929
+          fetch https://github.com/linux-test-project/ltp/releases/download/20230929/ltp-full-20230929.tar.xz
+          tar xf ltp-full-20230929.tar.xz
 
 - builder:
     name: execute-job-build-script
