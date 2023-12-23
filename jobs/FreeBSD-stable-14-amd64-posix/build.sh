@@ -8,6 +8,9 @@ disable-dtrace-tests.sh
 disable-zfs-tests.sh
 disable-notyet-tests.sh
 run-ltp-posix.sh
+run.py
+fixes.patch
+format_junit.py
 "
 
 export USE_DL_CONTENT="
