@@ -89,6 +89,7 @@ else
 		-s 1:0,lpc \
 		-s 2:0,virtio-blk,${IMG_NAME} \
 		-s 3:0,virtio-blk,meta.tar \
+		-s 4:0,virtio-net,tap0 \
 		${BHYVE_EXTRA_DISK_PARAM} \
 		-l com1,stdio \
 		${TEST_VM_NAME}; \
