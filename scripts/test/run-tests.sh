@@ -51,6 +51,9 @@ cp -R ${JOB_DIR}/${METADIR}/ ${METADIR}/
 for i in ${USE_TEST_SUBR}; do
 	cp ${TEST_BASE}/subr/${i} ${METADIR}/
 done
+for u in ${USE_DL_CONTENT}; do
+	(cd ${METADIR}; fetch $u)
+done
 touch ${METADIR}/auto-shutdown
 sh -ex ${TEST_BASE}/create-meta.sh
 

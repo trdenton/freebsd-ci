@@ -10,4 +10,8 @@ disable-notyet-tests.sh
 run-ltp-posix.sh
 "
 
+export USE_DL_CONTENT="
+https://github.com/linux-test-project/ltp/releases/download/20230929/ltp-full-20230929.tar.xz
+"
+
 sh -x freebsd-ci/scripts/test/run-tests.sh
